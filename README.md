@@ -8,10 +8,18 @@
 
 #### In this Text Analysis workshop, we'll cover how to load the text analysis packages, generate visualizations and learn how to interpret the results. 
 
+
 ### Prerequisite
-* #### Have local installation of R and RStudio on own computer or access [RStudio Cloud](https://login.rstudio.cloud/register) with own account
+* #### Have local installation of R and RStudio on own computer or access [RStudio Cloud](https://login.rstudio.cloud/register) with own account. You can also use CMC RStudio Server (see below).
 * #### Refer to [How to Install R](https://www.datacamp.com/community/tutorials/installing-R-windows-mac-ubuntu) for installation
 * #### Have some basic experience with R programming
+
+### CMC RStudio Server Account
+To access the CMC RStudio Server, please contact qcl@cmc.edu to activate your school account for the RStudio Server. Once your school account is added to the access list, please follow the instrutions below:
+1.   Open https://webapps.cmc.edu/rstudio/auth-sign-in
+2.   Use your CMC username (without @cmc.edu or @claremontmckenna.edu)
+3.   Type your password for the CMC credential
+  
 
 ### The workshop covers
 * Why use R
