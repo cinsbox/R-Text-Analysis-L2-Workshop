@@ -15,7 +15,7 @@ Make sure that you have:
 
 - Sign-in
 - Install R and RStudio or have RStudio Cloud account
-- Download files
+- Download files from GitHub
 
 Workshop Agenda
 ========================================================
@@ -46,6 +46,17 @@ What's text analysis:
   * Research: qualitative data
   * Marketing: customer reviews
   * Social media: user reviews
+  
+Text Mining Steps
+========================================================
+
+1. Install packages
+2. Load text file: 
+3. Text transformation
+4. Text cleaning 
+5. Document matrix
+6. Frequent words 
+7. Word Cloud
 
 Today's Data: Movie Reviews
 ========================================================
@@ -134,7 +145,7 @@ docs <- tm_map(docs, stemDocument)
 Document Matrix
 ====================================
 ```{r eval=FALSE}
-# Document matrix is a table containing the frequency of the words. Column names are words and row names are documents. The function TermDocumentMatrix() from text mining package can then be used
+# Document matrix is a table containing the frequency of the words. Column names are words and row names are documents. The function TermDocumentMatrix() from text mining package is used here.  
 dtm <- TermDocumentMatrix(docs)
 m <- as.matrix(dtm)
 v <- sort(rowSums(m),decreasing=TRUE)
@@ -182,7 +193,7 @@ Word Cloud Color
 - Change word cloud color: 
 ```{r eval=FALSE}
 # Word cloud
-set.seed(1234) # Random number
+set.seed(1234) # Random number generator to reproduce the function
 wordcloud(words = d$word, scale = c(2, 0.2), freq = d$freq, min.freq = 1, max.words=200, random.order=FALSE, rot.per=0.35, colors=brewer.pal(8, "Set2"))
 
 ```
@@ -237,12 +248,15 @@ qplot(sentiment$ave_sentiment, geom="histogram", binwidth=0.1, main="Review Sent
 Hands on exercises (20 to 25 minutes)
 ========================================================
 
-1. Text mining package can be used on other content as well, use either the Jobs or Rowling [speech](https://www.lifehack.org/794639/famous-speeches), generate the frequency word bar plot and the word cloud
+1. Text mining package can be used on other content as well, use either the Jobs or Rowling [speech](https://www.lifehack.org/794639/famous-speeches), generate the frequency word bar plot, word cloud and sentiment histogram.  
 
-2. Use the [bike](https://www.amazon.com/Schwinn-Front-Suspension-Lightweight-Step-Over-Drivetrain/dp/B07NZY5HY6/ref=cm_cr_arp_d_product_top?ie=UTF8) reviews or [restaurant](https://www.kingandprince.com/dining-guest-reviews.aspx) reviews, generate a sentiment histogram
+2. Use the [bike](https://www.amazon.com/Schwinn-Front-Suspension-Lightweight-Step-Over-Drivetrain/dp/B07NZY5HY6/ref=cm_cr_arp_d_product_top?ie=UTF8) reviews and/or [restaurant](https://www.kingandprince.com/dining-guest-reviews.aspx) reviews, generate the sentiment histogram. 
 
 When done: 
 * Post the word frequency bar plot, word cloud and the sentiment histogram to  [Gallery](https://docs.google.com/presentation/d/1HiaHUejWNUZFUAB8LoxT_9cOz1xZCT_fWLScCMYM9M4/edit?usp=sharing)
+
+=======
+
 * Include 1 or 2 sentences of your take on the output
 
 Take a gallery walk on the output in the last 5-10 minutes
